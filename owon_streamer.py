@@ -17,7 +17,7 @@ APP_VERSION = "1.0.1"
 # Help menu texts (dummy values, change them later). Shown only as text,
 # nothing is opened.
 CONTACT_EMAIL = "findsbuddy@gmail.com"
-GIT_REPO = "https://github.com/Lab1717/owon-multimeter-tool"
+GIT_REPO = "https://github.com/Lab1717/owon-hds-usb_streamer"
 
 VID = 0x5345
 PID = 0x1234
