@@ -3,6 +3,13 @@
 
 A Python-based USB interface for **OWON HDS-series digital multimeters**. Monitor measurements in real time directly from your computer through a simple graphical interface.
 
+### Compatibility
+
+**Tested with:** OWON HDS242.
+
+The application is designed for OWON HDS-series multimeters and may also work with other OWON models that support compatible USB communication commands. However, compatibility with other models has not yet been verified.
+
+If you test it with another OWON multimeter, feedback is welcome!
 ---
 
 ## ✨ Features
