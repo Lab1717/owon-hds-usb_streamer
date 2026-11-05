@@ -1,5 +1,5 @@
 
-# OWON USB Streamer
+# OWON HDS USB DATA Streamer
 
 A Python-based USB interface for **OWON HDS-series digital multimeters**. Monitor measurements in real time directly from your computer through a simple graphical interface.
 
