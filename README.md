@@ -34,15 +34,15 @@ A working libusb backend
 Installation
 1. Clone the repository
 bash
-git clone https://github.com/Lab1717/owon-hds-usb_streame.git
-cd owon-hds-usb_streame
+git clone https://github.com/Lab1717/owon-hds-usb_streamer.git
+cd owon-hds-usb_streamer
 
 2. Install dependencies
 bash
 pip install pyusb
 
 
-Tkinter is normally included with Python. On Linux, it may need to be installed separately:
+On Linux, Tkinter may need to be installed separately:
 
 bash
 sudo apt install python3-tk
@@ -50,7 +50,36 @@ sudo apt install python3-tk
 
 You also need a working libusb backend for PyUSB.
 
-3. Run the application
+3. USB Permissions (Linux)
+
+On Linux, PyUSB may not have permission to access the multimeter by default.
+
+Create a udev rule:
+
+bash
+sudo nano /etc/udev/rules.d/99-owon.rules
+
+
+Add the following line:
+
+text
+SUBSYSTEM=="usb", ATTR{idVendor}=="5345", ATTR{idProduct}=="1234", MODE="0666"
+
+
+Save the file, then reload the udev rules:
+
+bash
+sudo udevadm control --reload-rules
+sudo udevadm trigger
+
+
+Unplug and reconnect the multimeter.
+
+You should now be able to run the application without root privileges.
+
+Note: The VID and PID in this rule must match the values configured in the Python application.
+
+4. Run the application
 bash
 python usb_streamer.py
 
@@ -63,12 +92,4 @@ Development Status
 
 🚧 Work in Progress
 
-This project is still under development.
-
-Basic measurement reading and AC/DC voltage range control are working, but some functions are still being investigated and improved.
-
-In particular, resistance and capacitance range control through USB is not yet supported.
-
-Feedback, testing and contributions are welcome!
-
-Developed as an independent project for experimenting with USB communication and remote control of OWON digital multimeters.
+This
