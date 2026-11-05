@@ -11,13 +11,13 @@ from tkinter import scrolledtext, messagebox
 import usb.core
 import usb.util
 
-APP_NAME = "USB Streamer"
-APP_VERSION = "1.0"
+APP_NAME = "OWON HDS - USB Streamer"
+APP_VERSION = "1.0.1"
 
 # Help menu texts (dummy values, change them later). Shown only as text,
 # nothing is opened.
-CONTACT_EMAIL = "your.name@example.com"
-GIT_REPO = "https://github.com/yourname/owon-multimeter-tool"
+CONTACT_EMAIL = "findsbuddy@gmail.com"
+GIT_REPO = "https://github.com/Lab1717/owon-multimeter-tool"
 
 VID = 0x5345
 PID = 0x1234
