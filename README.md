@@ -89,7 +89,7 @@ You should now be able to run the application without root privileges.
 ### 4. Run the application
 
 ```bash
-python usb_streamer.py
+python owon_streamer.py
 ```
 
 Make sure your multimeter is connected via USB before starting the application.
